@@ -1,0 +1,68 @@
+/**
+ * --- ABOUT THE PROJECT: ---
+ * 
+ * -- How to contribute: --
+ * 
+ * -- Coding standards HTML: --
+ * 1. Use 4 spaces for indentation
+ * 2. Double quotes only, never single quotes
+ * 3. Always use proper indentation
+ * 4. Use tags and elements appropriate for an HTML5 doctype (e.g., self-closing tags)
+ *
+ * -- Coding standards CSS: --
+ * 1. Adhere to the *Recess CSS property order* [http://markdotto.com/2011/11/29/css-property-order/]
+ * 2. Multiple-line approach (one property and value per line)
+ * 3. Always a space after a property's colon (.e.g, display: block; and not display:block;)
+ * 4. End all lines with a semi-colon
+ * 5. For multiple, comma-separated selectors, place each selector on it's own line
+ * 6. Attribute selectors, like input[type="text"] should always wrap the attribute's value in double quotes, for consistency and safety
+ *
+ * -- Coding standards JS: --
+ * 1. Use semicolons
+ * 2. Comma last
+ * 3. 2 spaces indentation (no tabs)
+ * 4. strict mode
+ * 5. "Attractive"
+ * 6. Install jslint or jshint to help you with your coding
+ *
+ *
+ * This project follow the *SMACSS* [http://smacss.com/] CSS model.
+ * Abstract your code whenever you can into: Base, Layout, Module and State.
+ * For more information, see the SMACSS website.
+ *
+ */
+
+/*********************/
+/* Twitter Bootstrap */
+/*********************/
+@import "bootstrap/bootstrap.less";
+@import "bootstrap/responsive.less";
+
+/********************/
+/* Manpower globals */
+/********************/
+@import "project-variables.less";
+@import "project-mixins.less";
+
+/***************************/
+/* Responsive Media Queries*/
+/***************************/
+
+/* Desktop*/
+@media (min-width: 980px) {
+  @import "desktop.less";
+}
+/* Tablet */
+@media (min-width: 768px) and (max-width: 979px) {
+  @import "tablets.less";
+}
+/* Mobile */
+@media (min-width: 320px) and (max-width: 520px) {
+  @import "mobile.less";
+}
+
+/* For all screens and devices */
+@import "base.less";
+
+/* IE </3 */
+@import "ie-fixes.less";

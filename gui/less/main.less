@@ -70,23 +70,23 @@
 /* Large desktop */
 @media (min-width: @desktopLargeMinWidth) { 
   // Optional: Create stylesheet for larger screens
-  @import "desktop.less";
+  @import "project-theme/desktop.less";
 }
   
 /* Portrait tablet to landscape and desktop */
 @media (min-width: @desktopMinWidth) and (max-width: @desktopMaxWidth) {
-  @import "desktop.less";
+  @import "project-theme/desktop.less";
 }
 
 /* Landscape phone to portrait tablet */
 @media (max-width: @tabletMaxWidth) {
-  @import "tablets.less";
+  @import "project-theme/tablets.less";
 }
 
 /* Landscape phones and down */
 @media (max-width: @mobileMaxWidth) { 
-  @import "mobile.less";
+  @import "project-theme/mobile.less";
 }
 
 /* For all screens and devices */
-@import "foundation.less";
+@import "project-theme/foundation.less";

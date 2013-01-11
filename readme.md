@@ -1,1 +1,4 @@
-LESS start up template for easy access.
+#LESS start up template.
+
+###Todo:
+* Come up with a better naming convention.

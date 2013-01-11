@@ -1,0 +1,28 @@
+/**
+ * Since old IE can't read media queries we have to import
+ * the necessary styles here and load the compiled css within
+ * a conditional statement in the header.
+ *
+ */
+
+@import "../../bootstrap/less/variables.less";
+@import "../../bootstrap/less/bootstrap.less";
+
+@import "project-components/project-variables.less";
+
+@import "foundation.less";
+@import "desktop.less";
+
+// Nest your styles with in the appropriate class
+.lt-ie9 {
+  // Less than IE9...
+}
+
+.lt-ie8 {
+  // Less than IE8...
+}
+
+.lt-ie7 {
+  // Less than IE7, let's hope you wont' have to go this far.
+  // May the force be with you.
+}

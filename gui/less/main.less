@@ -32,37 +32,61 @@
  *
  */
 
-/*********************/
-/* Twitter Bootstrap */
-/*********************/
-@import "bootstrap/bootstrap.less";
-@import "bootstrap/responsive.less";
+/**
+ * Bootstrap
+ *
+ */
+@import "../bootstrap/less/bootstrap.less";
+@import "../bootstrap/less/responsive.less";
 
-/********************/
-/* Manpower globals */
-/********************/
-@import "project-variables.less";
-@import "project-mixins.less";
+/**
+ * Project Bootstrap Themes
+ *
+ */
+// If you extend a Bootstrap component, place it here.
+// Ex. @import "project-bootstrap-theme/navbar.less"
 
-/***************************/
-/* Responsive Media Queries*/
-/***************************/
+/**
+ * Project Common
+ *
+ */
+@import "project-components/project-variables.less";
+@import "project-components/project-mixins.less";
 
-/* Desktop*/
-@media (min-width: 980px) {
+// If you create more common components, place them here
+
+/**
+ * Project Components
+ *
+ */
+
+// Place your project components here
+
+/**
+ * Responsive queries
+ *
+ */
+
+/* Large desktop */
+@media (min-width: @desktopLargeMinWidth) { 
+  // Optional: Create stylesheet for larger screens
   @import "desktop.less";
 }
-/* Tablet */
-@media (min-width: 768px) and (max-width: 979px) {
+  
+/* Portrait tablet to landscape and desktop */
+@media (min-width: @desktopMinWidth) and (max-width: @desktopMaxWidth) {
+  @import "desktop.less";
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: @tabletMaxWidth) {
   @import "tablets.less";
 }
-/* Mobile */
-@media (min-width: 320px) and (max-width: 520px) {
+
+/* Landscape phones and down */
+@media (max-width: @mobileMaxWidth) { 
   @import "mobile.less";
 }
 
 /* For all screens and devices */
-@import "base.less";
-
-/* IE </3 */
-@import "ie-fixes.less";
+@import "foundation.less";
